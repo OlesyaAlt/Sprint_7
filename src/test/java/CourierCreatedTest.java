@@ -2,7 +2,7 @@ import org.apache.commons.lang3.RandomStringUtils;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
-import ru.yandex.praktikum.Courier;
+import ru.yandex.praktikum.models.Courier;
 import static org.hamcrest.Matchers.is;
 
 public class CourierCreatedTest extends BaseTest{

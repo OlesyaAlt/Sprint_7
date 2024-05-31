@@ -1,6 +1,6 @@
 import org.apache.commons.lang3.RandomStringUtils;
 import org.junit.Test;
-import ru.yandex.praktikum.Courier;
+import ru.yandex.praktikum.models.Courier;
 
 public class CourierCreatedNegativeTest extends BaseTest {
     private Courier courier;
