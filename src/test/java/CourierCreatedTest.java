@@ -1,3 +1,5 @@
+import io.qameta.allure.Description;
+import io.qameta.allure.junit4.DisplayName;
 import org.apache.commons.lang3.RandomStringUtils;
 import org.junit.After;
 import org.junit.Before;
@@ -20,6 +22,8 @@ public class CourierCreatedTest extends BaseTest{
     // запрос возвращает правильный код ответа
     // успешный запрос возвращает ok: true;
     @Test
+    @DisplayName("creating a courier - /api/v1/courier")
+    @Description("checking the creation of the courier, the response code and the response body")
     public void courierCreatedTest() {
         courierSteps
                 .createCourier(courier)
@@ -30,6 +34,8 @@ public class CourierCreatedTest extends BaseTest{
     // нельзя создать двух одинаковых курьеров
     // если создать пользователя с логином, который уже есть, возвращается ошибка
     @Test
+    @DisplayName("you cannot create two identical couriers - /api/v1/courier")
+    @Description("check that it is impossible to create two identical couriers and error code 409")
     public void dontCreateTwoIdenticalCouriers() {
         courierSteps
                 .createCourier(courier);

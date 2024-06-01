@@ -1,7 +1,6 @@
 package ru.yandex.praktikum.steps;
 import io.restassured.response.ValidatableResponse;
 import ru.yandex.praktikum.models.Courier;
-
 import static io.restassured.RestAssured.given;
 
 public class CourierSteps {

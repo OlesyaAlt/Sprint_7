@@ -1,3 +1,5 @@
+import io.qameta.allure.Description;
+import io.qameta.allure.junit4.DisplayName;
 import org.apache.commons.lang3.RandomStringUtils;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -25,8 +27,10 @@ public class CourierCreatedParamTest extends BaseTest {
                 {RandomStringUtils.randomAlphabetic(10), RandomStringUtils.randomAlphabetic(8), null}
         };
     }
-
-    @Test //чтобы создать курьера, нужно передать в ручку все обязательные поля
+    //чтобы создать курьера, нужно передать в ручку все обязательные поля
+    @Test
+    @DisplayName("you cannot create a courier if the required field is empty - /api/v1/courier")
+    @Description("checking the required field for completion")
     public void needToPassAllRequiredFields() {
         Courier courier = new Courier();
         courier.setLogin(login);

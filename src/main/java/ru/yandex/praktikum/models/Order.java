@@ -1,8 +1,5 @@
 package ru.yandex.praktikum.models;
-
 import lombok.Data;
-
-import java.util.Arrays;
 
 @Data
 public class Order {
@@ -14,9 +11,5 @@ public class Order {
     private int rentTime;
     private String deliveryDate;
     private String comment;
-    private Arrays[] color;
-
-    public String setColor(String color) {
-        return Arrays.toString(this.color);
-    }
+    private String[] color;
 }
