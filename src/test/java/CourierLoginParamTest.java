@@ -11,7 +11,6 @@ import ru.yandex.praktikum.models.Courier;
 public class CourierLoginParamTest extends BaseTest {
     private final String login;
     private final String password;
-    private Courier courier;
 
     public CourierLoginParamTest(String login, String password) {
         this.login = login;
